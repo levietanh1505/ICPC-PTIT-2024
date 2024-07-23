@@ -35,9 +35,7 @@ vector<int> findMaxOfMins(const vector<int>& A, int N) {
     // Tìm phần tử nhỏ hơn gần nhất về bên trái cho mỗi phần tử trong mảng
     // Khi đó độ dài từ chỉ số phần tử tìm được + 1 đến phần tử đang xét là khoảng dài nhất bên trái mà A[i] nhỏ nhất
     for (int i = 0; i < N; ++i) {
-        while (!s.empty() && A[s.top()] >= A[i]) {
-            s.pop();
-        }
+        while (!s.empty() && A[s.top()] >= A[i]) s.pop();
         left[i] = s.empty() ? -1 : s.top(); // Nếu ngăn xếp trống, gán -1, ngược lại gán giá trị đỉnh ngăn xếp
         s.push(i); // Đẩy chỉ số hiện tại vào ngăn xếp
     }
@@ -47,9 +45,7 @@ vector<int> findMaxOfMins(const vector<int>& A, int N) {
 
     // Tìm phần tử nhỏ hơn gần nhất về bên phải cho mỗi phần tử trong mảng
     for (int i = N - 1; i >= 0; --i) {
-        while (!s.empty() && A[s.top()] >= A[i]) {
-            s.pop();
-        }
+        while (!s.empty() && A[s.top()] >= A[i]) s.pop();
         right[i] = s.empty() ? N : s.top(); // Nếu ngăn xếp trống, gán N, ngược lại gán giá trị đỉnh ngăn xếp
         s.push(i); // Đẩy chỉ số hiện tại vào ngăn xếp
     }
