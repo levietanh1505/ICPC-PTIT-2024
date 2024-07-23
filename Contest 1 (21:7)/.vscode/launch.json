@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/macbookair2020/Documents/GitHub/ICPC-PTIT-2024/Contest 1 (21:7)",
+      "program": "/Users/macbookair2020/Documents/GitHub/ICPC-PTIT-2024/Contest 1 (21:7)/build/Debug/outDebug"
+    }
+  ]
+}
