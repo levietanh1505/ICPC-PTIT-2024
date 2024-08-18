@@ -1,14 +1,22 @@
-// Cho một dãy số gồm N phần tử A[1], A[2], ..., A[N] và số nguyên K. 
-// Nhiệm vụ của bạn là hãy đếm số lượng dãy con liên tiếp thỏa mãn số cặp nghịch thế trong dãy con đó >= K.
+// Cho một dãy số gồm N phần tử A[1], A[2], ..., A[N] và số nguyên K. Nhiệm vụ của bạn là hãy đếm số lượng dãy con liên tiếp thỏa mãn số cặp nghịch thế trong dãy con đó >= K.
 // Số cặp nghịch thế của dãy con A[i], A[i+1], ..., A[j] là số cặp (u, v) thỏa mãn i ≤ u < v ≤ j và A[u] > A[v].
 // Input:
 // Dòng đầu tiên là số nguyên dương N và K (1 ≤ N ≤ 100000, K ≤ N*(N-1)/2).
 // Dòng tiếp theo gồm N số nguyên dương A[i] (0 ≤ A[i] ≤ 109).
 // Output:
 // In ra một số nguyên duy nhất là đáp số của bài toán.
+// Test ví dụ:
+// Input
+// Output
+// 4 1
+// 1 2 4 0
+// 3
+// 2 0
+// 1 2
+// 3
 
-
-
+// Giải thích test 1:
+// Các dãy con A[1à4], A[2à4], A[3à4] có một cặp nghịch thế.
 #include<bits/stdc++.h>
 #include<ext/pb_ds/assoc_container.hpp>
 #include<ext/pb_ds/tree_policy.hpp>
@@ -31,12 +39,7 @@ void fast(){
 	ios::sync_with_stdio(false);
     cin.tie(nullptr);
 }
- 
- 
- 
- 
- 
- 
+
 int main(){
 	#ifndef ONLINE_JUDGE
 	freopen("INPUT.inp","r",stdin);

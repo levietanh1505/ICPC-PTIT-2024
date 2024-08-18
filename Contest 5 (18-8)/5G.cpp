@@ -59,7 +59,6 @@ void solve(int k){
     cout << maxWater << endl;
 }
 
-
 int main() {
     cin >> n;
     int k;  cin >> k;
